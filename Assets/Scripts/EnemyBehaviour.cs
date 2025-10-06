@@ -1,20 +1,29 @@
+
 using UnityEngine;
-using UnityEngine.InputSystem.Controls;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour, IPoolClient
 {
-    [SerializeField] private Transform startLine;
+    [HideInInspector] public StartLine startLine;
     [SerializeField] private float speed = 2f;
-    private Vector3 position;
-    void Start()
-    {
-        transform.position = startLine.position;
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.position -= speed * Time.deltaTime * transform.right;
+    }
 
+    public void Arise(Vector2 position, Quaternion rotation)
+    {
+        gameObject.SetActive(true);
+        transform.SetPositionAndRotation(position, rotation);
+    }
+    public void Fall()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Teleport()
+    {
+        startLine.Teleport(this);
     }
 }
