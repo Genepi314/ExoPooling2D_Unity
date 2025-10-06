@@ -3,11 +3,18 @@ using UnityEngine.InputSystem;
 
 public class CapsuleControler : MonoBehaviour
 {
+    // Pour les contrôles, of course :
     [SerializeField] private InputActionAsset actions;
     [SerializeField] private float speed;
+    [SerializeField] private LifeManager lifeManager;
     private InputAction yAxis;
     private InputAction xAxis;
     [SerializeField] private Camera cam;
+
+
+    // pour UI, aka LifeManager :
+    public int life = 3;
+
 
     void Awake()
     {
@@ -42,8 +49,8 @@ public class CapsuleControler : MonoBehaviour
             return;
         }
         transform.Translate(0f, yAxis.ReadValue<float>() * speed * Time.deltaTime, 0f);
-        // else if (cam.WorldToScreenPoint(transform.position).y <= 0f)
     }
+
     private void MoveX()
     {
         if (cam.WorldToScreenPoint(transform.position).x <= 0f && xAxis.ReadValue<float>() < 0)
@@ -51,5 +58,14 @@ public class CapsuleControler : MonoBehaviour
             return;
         }
         transform.Translate(xAxis.ReadValue<float>() * speed * Time.deltaTime, 0f, 0f);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            // life -= 1;
+            // Debug.Log($"life = {life}");
+            lifeManager.RemoveLife();
+        }
     }
 }

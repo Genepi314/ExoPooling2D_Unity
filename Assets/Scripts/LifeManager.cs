@@ -1,16 +1,27 @@
+using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LifeManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject sprite;
+    [SerializeField] private CapsuleControler capsContr;
+    private List<GameObject> howManyHans = new();
     void Start()
     {
-        
+        for (int i = 0; i < capsContr.life; i++)
+        {
+            Vector2 lifePos = new Vector2(transform.position.x + i, transform.position.y);
+            GameObject hanSolo = Instantiate(sprite, lifePos, Quaternion.identity);
+            howManyHans.Add(hanSolo);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveLife()
     {
-        
+        capsContr.life -= 1;
+        Debug.Log($"Il vous reste {capsContr.life} vies.");
     }
+
 }
