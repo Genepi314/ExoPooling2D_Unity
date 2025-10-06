@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour, IPoolClient
 {
     [HideInInspector] public StartLine startLine;
-    [SerializeField] private float speed = 2f;
+    [SerializeField] private float speed = 4f;
 
 
     void Update()

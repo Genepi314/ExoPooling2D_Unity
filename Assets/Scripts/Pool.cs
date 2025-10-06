@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class Pool<T>
@@ -41,11 +42,23 @@ where T : IPoolClient
         client.Fall();
     }
 
-    public T Get()
+    // public T Get()
+    // {
+    //     if (queue.Count == 0) CreateBatch();
+    //     T client = queue.Dequeue();
+    //     client.Arise(anchor.transform.position, anchor.transform.rotation);
+    //     return client;
+    // }
+
+
+
+    public T Get(float minY, float maxY)
     {
         if (queue.Count == 0) CreateBatch();
         T client = queue.Dequeue();
-        client.Arise(anchor.transform.position, anchor.transform.rotation);
+        UnityEngine.Vector2 randomPosition = new UnityEngine.Vector2(anchor.transform.position.x, UnityEngine.Random.Range(minY, maxY));
+        client.Arise(randomPosition, anchor.transform.rotation);
         return client;
     }
+
 }

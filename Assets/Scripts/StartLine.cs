@@ -1,10 +1,9 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class StartLine : MonoBehaviour
 {
-    [SerializeField] private float cooldown = 1f;
+    [SerializeField] private float cooldown = 0.5f;
     [SerializeField] GameObject prefab;
     private Pool<EnemyBehaviour> pool;
     public GameObject minY;
@@ -21,7 +20,7 @@ public class StartLine : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(cooldown);
-            EnemyBehaviour enemy = pool.Get(); // Ici je récupère le client que Get va générer.
+            EnemyBehaviour enemy = pool.Get(minY.transform.position.y, maxY.transform.position.y); // Ici je récupère le client que Get va générer.
             enemy.startLine = this;
         }
     }
