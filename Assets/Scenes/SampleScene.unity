@@ -421,6 +421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2294380367002383347, guid: 7074380b412ac05489d03741ae89d981, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5668778265266930322, guid: 7074380b412ac05489d03741ae89d981, type: 3}
       propertyPath: m_Name
       value: Tonneau De L'Espace
