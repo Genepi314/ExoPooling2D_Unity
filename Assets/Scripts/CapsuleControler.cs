@@ -13,7 +13,7 @@ public class CapsuleControler : MonoBehaviour
 
 
     // pour UI, aka LifeManager :
-    public int life = 3;
+    // public int Life = 3;
 
 
     void Awake()
@@ -63,8 +63,6 @@ public class CapsuleControler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            // life -= 1;
-            // Debug.Log($"life = {life}");
             lifeManager.RemoveLife();
         }
     }

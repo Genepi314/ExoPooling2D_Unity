@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7804726813127239992}
   - component: {fileID: 1456114457916827514}
+  - component: {fileID: -3949140249416845626}
   m_Layer: 0
   m_Name: hansolo_0
   m_TagString: Untagged
@@ -87,3 +88,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3949140249416845626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507973706692673019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f4f5f0a5c1ac34d95404ed94efd73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
