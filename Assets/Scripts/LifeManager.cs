@@ -9,7 +9,7 @@ public class LifeManager : MonoBehaviour
     [SerializeField] private GameObject sprite;
     [SerializeField] private CapsuleControler capsContr;
     private List<GameObject> allHans = new();
-    private int hansLife = 3;
+    [SerializeField] private int hansLife = 3;
     private Color color;
     void Start()
     {
@@ -22,7 +22,7 @@ public class LifeManager : MonoBehaviour
 
     public void RemoveLife()
     {
-        if (allHans.Count > 0)
+        if (hansLife > 0)
         {
             hansLife -= 1;
             // allHans[hansLife].ChangeAlpha(); 

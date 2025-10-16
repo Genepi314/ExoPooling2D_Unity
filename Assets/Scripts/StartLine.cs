@@ -4,10 +4,10 @@ using UnityEngine;
 public class StartLine : MonoBehaviour
 {
     [SerializeField] private float cooldown = 0.5f;
-    [SerializeField] GameObject prefab;
+    [SerializeField] private GameObject prefab;
     private Pool<EnemyBehaviour> pool;
-    public GameObject minY;
-    public GameObject maxY;
+    [SerializeField] private GameObject minY;
+    [SerializeField] private GameObject maxY;
 
     void Start()
     {

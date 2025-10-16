@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour, IPoolClient
@@ -25,5 +26,10 @@ public class EnemyBehaviour : MonoBehaviour, IPoolClient
     public void Teleport()
     {
         startLine.Teleport(this);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }
