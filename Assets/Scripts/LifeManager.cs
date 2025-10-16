@@ -7,9 +7,8 @@ using UnityEngine;
 public class LifeManager : MonoBehaviour
 {
     [SerializeField] private GameObject sprite;
-    [SerializeField] private CapsuleControler capsContr;
     private List<GameObject> allHans = new();
-    [SerializeField] private int hansLife = 3;
+    [SerializeField] private int hansLife;
     private Color color;
     void Start()
     {
@@ -22,11 +21,13 @@ public class LifeManager : MonoBehaviour
 
     public void RemoveLife()
     {
-        if (hansLife > 0)
+        if (hansLife >= 0)
         {
             hansLife -= 1;
-            // allHans[hansLife].ChangeAlpha(); 
-            
+            Color c = allHans[hansLife].GetComponent<SpriteRenderer>().color;
+            c.a = 0;
+            allHans[hansLife].GetComponent<SpriteRenderer>().color = c;
+
         }
         Debug.Log($"Il vous reste {hansLife} vies.");
     }
