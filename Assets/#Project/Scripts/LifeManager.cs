@@ -3,7 +3,6 @@ using System.Runtime.ExceptionServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
-// [RequireComponent(typeof(SpriteRenderer))]
 public class LifeManager : MonoBehaviour
 {
     [SerializeField] private GameObject sprite;
@@ -21,13 +20,12 @@ public class LifeManager : MonoBehaviour
 
     public void RemoveLife()
     {
-        if (hansLife >= 0)
+        if (hansLife > 0)
         {
             hansLife -= 1;
             Color c = allHans[hansLife].GetComponent<SpriteRenderer>().color;
             c.a = 0;
             allHans[hansLife].GetComponent<SpriteRenderer>().color = c;
-
         }
         Debug.Log($"Il vous reste {hansLife} vies.");
     }

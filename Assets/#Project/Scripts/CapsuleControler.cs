@@ -6,14 +6,10 @@ public class CapsuleControler : MonoBehaviour
     // Pour les contrôles, of course :
     [SerializeField] private InputActionAsset actions;
     [SerializeField] private float speed;
-    [SerializeField] private LifeManager lifeManager;
+    [SerializeField] private LifeManager lifePlace;
     private InputAction yAxis;
     private InputAction xAxis;
     [SerializeField] private Camera cam;
-
-
-    // pour UI, aka LifeManager :
-    // public int Life = 3;
 
 
     void Awake()
@@ -63,7 +59,7 @@ public class CapsuleControler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            lifeManager.RemoveLife();
+            lifePlace.RemoveLife();
         }
     }
 }

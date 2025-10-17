@@ -28,8 +28,11 @@ public class EnemyBehaviour : MonoBehaviour, IPoolClient
         startLine.Teleport(this);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            Teleport();
+        }
     }
 }

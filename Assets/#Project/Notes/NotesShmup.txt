@@ -1,0 +1,2 @@
+* Créer une animation pour la destruction des ennemis
+* Implémenter le fameux "stop" de Sakurai quand notre vaisseau est détruit

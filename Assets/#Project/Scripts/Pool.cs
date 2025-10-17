@@ -50,8 +50,6 @@ where T : IPoolClient
     //     return client;
     // }
 
-
-
     public T Get(float minY, float maxY)
     {
         if (queue.Count == 0) CreateBatch();

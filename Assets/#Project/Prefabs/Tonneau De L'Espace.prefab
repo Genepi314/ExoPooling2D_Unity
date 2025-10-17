@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1757638909924798105}
   m_Layer: 0
   m_Name: Tonneau De L'Espace
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,9 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions: {fileID: -944628639613478452, guid: a59a9f450136b1745b5b7ed192d56a69, type: 3}
   speed: 2
-  lifeManager: {fileID: 5846121991037195829, guid: 46bf7232b308c1241955de1a68a270bb, type: 3}
+  lifePlace: {fileID: 0}
   cam: {fileID: 807769699608489040, guid: fb0544d06d7849143a2638aa110a0684, type: 3}
-  life: 3
 --- !u!61 &5084755865841880207
 BoxCollider2D:
   m_ObjectHideFlags: 0
