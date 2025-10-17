@@ -251,6 +251,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1931970782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5846121991037195829, guid: 46bf7232b308c1241955de1a68a270bb, type: 3}
+  m_PrefabInstance: {fileID: 7728519534328799326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d7a0190e9b6e843a5fb11993dfee05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1207924493004091179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,9 +453,13 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7791565375246978360, guid: 7074380b412ac05489d03741ae89d981, type: 3}
+      propertyPath: lifePlace
+      value: 
+      objectReference: {fileID: 1931970782}
+    - target: {fileID: 7791565375246978360, guid: 7074380b412ac05489d03741ae89d981, type: 3}
       propertyPath: lifeManager
       value: 
-      objectReference: {fileID: 5846121991037195829, guid: 46bf7232b308c1241955de1a68a270bb, type: 3}
+      objectReference: {fileID: 1931970782}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
