@@ -1,8 +1,11 @@
 * Ajouter invincibilité à CapsuleControler (coroutine et cooldown)
-* Créer une autre pool pour les bullets
+* Créer une autre pool pour les bullets ?
 * 
 
 
-OPTIONNEL
+OPTIONNEL (nombre de * = niveau de difficulté perçue)
+
 * Créer une animation pour la destruction des ennemis
-* Implémenter le fameux "stop" de Sakurai quand notre vaisseau est détruit
+** Implémenter le fameux "stop" de Sakurai quand notre vaisseau est détruit
+*** Faire en sorte que les ennemis apparaissent d'une façon intéressante, par "escadrons"
+* Rendre le code plus modulable pour les vies dans le life manager, pour qu'on puisse ajouter ou enlever de la vie max.
